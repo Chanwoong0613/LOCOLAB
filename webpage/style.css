@@ -1,0 +1,82 @@
+:root {
+    --background: #222831;
+    --foreground: #EEEEEE;
+    --primary: #00ADB5;
+    --secondary: #393E46;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: var(--foreground);
+    color: var(--background);
+}
+
+header a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid;
+    border-radius: 10px;
+}
+
+main {
+    flex: 1;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+ul {
+    font-size: larger;
+    margin: 20px;
+    padding: 0px 20px;
+    border: 3px solid;
+    border-radius: 20px;
+    list-style: none;
+}
+
+li {
+    margin: 10px 0px;
+}
+
+li::before {
+    content: '-';
+    margin-right: 10px;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
